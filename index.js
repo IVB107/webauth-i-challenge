@@ -3,6 +3,9 @@ const helmet = require('helmet');
 const cors = require('cors');
 const bcrypt = require('bcryptjs');
 
+const db = require('./data/dbConfig.js');
+const Users = require('./users/users-model.js');
+
 const server = express();
 
 server.use(helmet());
@@ -16,5 +19,5 @@ server.get('/', (req, res) => {
 const port = 4000;
 
 server.listen(port, () => {
-  console.log(`*** Server running on Port ${port}`);
+  console.log(`*** Good stuff over on Port ${port} ***`);
 });
