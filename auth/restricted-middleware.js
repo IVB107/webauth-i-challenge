@@ -1,6 +1,6 @@
 module.exports = (req, res, next) => {
   try {
-    req.session && req.user
+    req.session && req.session.user
       ? next()
       : res.status(401).json({ message: "Invalid Credentials." });
   } catch (err) {
